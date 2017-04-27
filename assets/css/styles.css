@@ -16,6 +16,10 @@ h1, h2, h3, h4, h5, h6, ul {
 a {
   text-decoration: none;
 }
+.container {
+  max-width: 1500px;
+  margin: auto;
+}
 
 /*------------------------------------------------------------ */
 /*------------------ HEADER ---------------------------------- */
@@ -68,13 +72,15 @@ section.landing {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
+  width: 100%;
+  min-height: 800px;
+  position: relative;
 }
 .landing .overlay {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-color: rgba(0,0,0, 0.2); /* Black w/opacity */
+  background-color: rgba(0,0,0, 0.2);
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
@@ -90,6 +96,7 @@ section.landing {
   -ms-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
+  margin-left: 150px;
 }
 .landing h1 {
   color: #fefefe;
@@ -295,6 +302,7 @@ section.items {
 
 section.color-bloc {
   height: 700px;
+  position: relative;
 }
 .color-bloc .bloc1, .color-bloc .bloc2 {
   height: 350px;
@@ -324,7 +332,7 @@ section.color-bloc {
 }
 .color-bloc .bloc1 .image {
   background-image: url('../img/art04.jpg');
-  background-position: center;
+  background-position: center 80%;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -345,6 +353,8 @@ section.color-bloc {
   -webkit-transform: translateY(-50%);
   padding: 10px;
   height: 200px;
+  max-width: 400px;
+  margin: auto;
 }
 .color-bloc h2 {
   text-transform: uppercase;
@@ -386,6 +396,7 @@ section.color-bloc {
 }
 
 
+
 /*------------------------------------------------------------ */
 /*------------------ FOOTER ---------------------------------- */
 /*------------------------------------------------------------ */
@@ -403,18 +414,18 @@ footer {
 footer .overlay {
   width: 100%;
   height: 100%;
-  z-index: 1;
   background-color: rgba(0,0,0, 0.2); /* Black w/opacity */
   overflow-x: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 footer .text {
-  padding: 0 350px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -webkit-transform: translateY(-50%);
+  max-width: 600px;
+  margin: auto;
+  padding-top: 10%;
+  z-index: 10;
+  position: relative;
 }
 footer h2 {
   text-transform: uppercase;
@@ -481,6 +492,24 @@ footer .copyright span {
     padding: 50px 150px;
   }
 }
+@media screen and (min-width:1600px) {
+  section.color-bloc {
+    height: 1000px;
+  }
+  .color-bloc .bloc1, .color-bloc .bloc2 {
+    height: 500px;
+  }
+}
+
+@media screen and (min-width:1500px) {
+  .landing .text {
+    margin-left: 0;
+  }
+  footer .text {
+    max-width: 800px;
+  }
+}
+
 @media screen and (max-width:1400px) {
   .thumbnail .picture {
     height: auto;
@@ -498,14 +527,14 @@ footer .copyright span {
   section.items {
     padding: 50px 100px;
   }
+  .landing .text {
+    margin-left: 100px;
+  }
   .color-bloc .bloc1 .color {
     padding-left: 100px;
   }
   .color-bloc .bloc2 .color {
     padding-right: 100px;
-  }
-  footer .text {
-    padding: 0 200px;
   }
   footer .title .underline {
     border: none;
@@ -541,10 +570,13 @@ footer .copyright span {
     padding: 0 50px;
     background-color: rgba(0,0,0, 0.4);
   }
+  .landing .text {
+    margin-left: 50px;
+  }
   section.items {
     padding: 0 50px;
     margin: 50px 0;
-    min-height: 50%;
+    min-height: 400px;
   }
   .color-bloc .bloc1 .color {
     padding-left: 50px;
@@ -558,8 +590,6 @@ footer .copyright span {
     width: 50px;
   }
 }
-
-@media screen and (max-width:769px) {
 
 /* Version mobile */
 @media screen and (max-width:600px) {
@@ -633,6 +663,7 @@ footer .copyright span {
     -moz-transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
     padding: 0 20px;
+    margin: 0;
   }
   .landing .link {
     text-align: center;
@@ -707,12 +738,12 @@ footer .copyright span {
   footer {
     min-height: 50%;
   }
-  footer .text {
-    padding: 0;
-    padding: 0 20px;
-  }
   footer .overlay {
     background-color: rgba(0,0,0, 0.4);
+  }
+  footer .text {
+    padding: 20px;
+    padding-top: 20%;
   }
   footer .link span {
     font-size: 20px;
