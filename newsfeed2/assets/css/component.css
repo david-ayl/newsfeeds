@@ -1,0 +1,65 @@
+
+/* Effect 2: 3D rolling links, idea from http://hakim.se/thoughts/rolling-links */
+.cl-effect-2 a {
+	-webkit-perspective: 1000px;
+	-moz-perspective: 1000px;
+	perspective: 1000px;
+}
+
+.cl-effect-2 a span {
+	position: relative;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: 'Open Sans';
+	color: #000;
+	background-color: #fefefe;
+	padding: 8px 35px;
+	font-weight: bold;
+	font-size: 0.8em;
+	border-left: 2px solid #000;
+	border-bottom: 2px solid #000;
+	-webkit-transition: -webkit-transform 0.3s;
+	-moz-transition: -moz-transform 0.3s;
+	transition: transform 0.3s;
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+}
+
+.csstransforms3d .cl-effect-2 a span::before {
+	position: absolute;
+	padding: 8px 35px;
+	border-top: 2px solid #000;
+	border-left: 2px solid #000;
+	top: 100%;
+	left: -2px;
+	background: #fefefe;
+	content: attr(data-hover);
+	-webkit-transition: background 0.3s;
+	-moz-transition: background 0.3s;
+	transition: background 0.3s;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+	-webkit-transform-origin: 50% 0;
+	-moz-transform-origin: 50% 0;
+	transform-origin: 50% 0;
+}
+
+.cl-effect-2 a:hover span,
+.cl-effect-2 a:focus span {
+	-webkit-transform: rotateX(91deg) translateY(-20px);
+	-moz-transform: rotateX(91deg) translateY(-20px);
+	transform: rotateX(91deg) translateY(-20px);
+}
+
+.csstransforms3d .cl-effect-2 a:hover span::before,
+.csstransforms3d .cl-effect-2 a:focus span::before {
+	background: #fefefe;
+  border-top: 2px solid #000;
+  border-left: 2px solid #000;
+	padding: 8px 35px;
+}
