@@ -486,7 +486,7 @@ section.grid {
 .grid .bloc {
   display: block;
   float: left;
-  width: 100%;
+  width: 33%;
   height: 250px;
   background-position: center;
   background-repeat: no-repeat;
@@ -725,14 +725,8 @@ footer span {
     height: 600px;
   }
   .grid .bloc {
-    width: 100%;
+    width: 50%;
     height: 200px;
-  }
-  .grid li {
-  	display: block;
-  	float: left;
-  	width: 50%;
-  	opacity: 0;
   }
 
 }
