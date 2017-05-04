@@ -1,5 +1,6 @@
 
 
+
 * {
   box-sizing: border-box;
 }
@@ -251,7 +252,8 @@ section.blocs-text {
   font-size: 1.2em;
 }
 .blocs-text p {
-  margin: 50px 0;
+  max-width: 1100px;
+  margin: 50px auto;
   padding: 0 100px;
   font-family: 'Open Sans';
   color: #6c7a89;
@@ -338,26 +340,14 @@ section.blocs-text {
 .blocs-text .bloc2 .text {
   padding-right: 20px;
 }
-.blocs-text .text a {
-  border-left: 2px solid #199cb6;
-  border-bottom: 2px solid #199cb6;
-  padding: 10px 25px;
-  font-family: 'Open Sans';
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9em;
-  color: #000;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
+/*.blocs-text .text a {
+
 }
 .blocs-text .text a:hover {
-  border-left: 5px solid #199cb6;
-  border-bottom: 5px solid #199cb6;
-}
-.blocs-text .bloc1 .text a, .blocs-text .bloc3 .text a {
+
+}*/
+
+/*.blocs-text .bloc1 .text a, .blocs-text .bloc3 .text a {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -366,7 +356,7 @@ section.blocs-text {
   position: absolute;
   bottom: 0;
   left: 0;
-}
+}*/
 
 /* -----------------------------------------------------------------------------
 ------------------------------ COLOR BAND --------------------------------------
@@ -398,6 +388,8 @@ section.color-band {
   border-bottom: 2px solid #199cb6;
 }
 .color-band .text p {
+  max-height: 200px;
+  overflow: hidden;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -407,6 +399,9 @@ section.color-band {
   margin-top: -10px;
   border-left: 5px solid #199cb6;
   padding: 0 10px;
+  font-family: 'Open Sans';
+  font-size: 1em;
+  color: #000;
 }
 .color-band .text a {
   position: absolute;
@@ -486,28 +481,6 @@ section.items {
   -webkit-overflow: hidden;
   -moz-overflow: hidden;
   -ms-overflow: hidden;
-}
-.items .item .text a {
-  border-left: 2px solid #199cb6;
-  border-bottom: 2px solid #199cb6;
-  padding: 10px 25px;
-  font-family: 'Open Sans';
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  font-size: 0.9em;
-  color: #000;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-}
-.items .item .text a:hover {
-  border-left: 5px solid #199cb6;
-  border-bottom: 5px solid #199cb6;
 }
 
 
@@ -853,4 +826,88 @@ footer span {
   }
 
 
+}
+
+
+.button {
+  position: absolute;
+  right: -70px;
+  bottom: -10px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+  margin-left: -7.5px;
+  border-left: 2px solid #199cb6;
+  border-bottom: 2px solid #199cb6;
+  padding: 10px 25px;
+
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 0.9em;
+  z-index: 2;
+  -moz-transition: all 0.15s ease-out 0.15s;
+  -o-transition: all 0.15s ease-out 0.15s;
+  -webkit-transition: all 0.15s ease-out;
+  -webkit-transition-delay: 0.15s;
+  -webkit-transition: all 0.15s ease-out 0.15s;
+  transition: all 0.15s ease-out 0.15s;
+}
+.bloc-text.bloc2 .button {
+    right: initial;
+  left: 80px!important;
+}
+.button a {
+  color: #000;
+  font-family: 'Open Sans';
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.button:after, .button:before {
+  position: absolute;
+  width: 100%;
+  max-width: 100%;
+  top: 100%;
+  left: 0;
+  bottom: -10px;
+  content: '';
+  z-index: 1;
+  -moz-transition: all 0.15s ease-out 0.15s;
+  -o-transition: all 0.15s ease-out 0.15s;
+  -webkit-transition: all 0.15s ease-out;
+  -webkit-transition-delay: 0.15s;
+  -webkit-transition: all 0.15s ease-out 0.15s;
+  transition: all 0.15s ease-out 0.15s;
+}
+.button:hover:before {
+  background: #199cb6;
+  top: 10px;
+  left: -10px;
+  height: 100%;
+  width: 10px;
+}
+.button:hover:after {
+  width: 100%;
+  background: #199cb6;
+  right: 0px;
+  left: -10px;
+  height: 10px;
+}
+.button {
+  color: #000;
+  margin-left: -7.5px;
+  margin-bottom: -7.5px;
+}
+.button:after, .button:before {
+  top: 100%;
+  left: 0;
+  bottom: 0px;
+}
+.button:before {
+  top: 0px;
+  left: 0px;
+  width: 0px;
+}
+.button:after {
+  right: 0px;
+  left: 0px;
+  height: 0px;
 }
