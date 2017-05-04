@@ -60,6 +60,9 @@ header .menu-burger .fa {
   line-height: 60px;
   color: rgba(25,156,182,0.5);
   transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
 }
 .menu .fa:hover {
   color: rgba(25,156,182,1);
@@ -127,6 +130,9 @@ section.landing {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
 }
 .landing .text h1 {
   text-transform: uppercase;
@@ -180,6 +186,9 @@ section.landing {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   right: 20px;
 }
 .landing .slick-prev.slick-arrow {
@@ -187,6 +196,9 @@ section.landing {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   left: 20px;
 }
 .landing .slick-dots {
@@ -222,7 +234,13 @@ section.blocs-text {
   height: 25px;
   margin-bottom: 20px;
   overflow: hidden;
+  -webkit-overflow: hidden;
+  -moz-overflow: hidden;
+  -ms-overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
 }
 .blocs-text h3 span {
   background-color: white;
@@ -331,6 +349,9 @@ section.blocs-text {
   font-size: 0.9em;
   color: #000;
   transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
 }
 .blocs-text .text a:hover {
   border-left: 5px solid #199cb6;
@@ -380,6 +401,9 @@ section.color-band {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   margin-top: -10px;
   border-left: 5px solid #199cb6;
   padding: 0 10px;
@@ -441,8 +465,17 @@ section.items {
   font-weight: 600;
   font-size: 1.1em;
   overflow: hidden;
+  -webkit-overflow: hidden;
+  -moz-overflow: hidden;
+  -ms-overflow: hidden;
   text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis;
+  -moz-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
   white-space: nowrap;
+  -webkit-white-space: nowrap;
+  -moz-white-space: nowrap;
+  -ms-white-space: nowrap;
 }
 .items .item p {
   text-align: justify;
@@ -450,6 +483,9 @@ section.items {
   color: #6c7a89;
   max-height: 200px;
   overflow: hidden;
+  -webkit-overflow: hidden;
+  -moz-overflow: hidden;
+  -ms-overflow: hidden;
 }
 .items .item .text a {
   border-left: 2px solid #199cb6;
@@ -465,6 +501,9 @@ section.items {
   right: 0;
   bottom: 0;
   transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
 }
 .items .item .text a:hover {
   border-left: 5px solid #199cb6;
@@ -521,6 +560,10 @@ section.grid {
   z-index: 10;
   opacity: 0;
   transition: all 0.7s ease;
+  -webkit-transition: all 0.7s ease;
+  -moz-transition: all 0.7s ease;
+  -ms-transition: all 0.7s ease;
+
 }
 .grid .bloc1:hover .overlay-grid, .grid .bloc2:hover .overlay-grid, .grid .bloc3:hover .overlay-grid, .grid .bloc4:hover .overlay-grid, .grid .bloc5:hover .overlay-grid, .grid .bloc6:hover .overlay-grid {
   opacity: 1;
@@ -530,6 +573,9 @@ section.grid {
   left: 50%;
   top: 50%;
   transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
   text-align: center;
   width: 80%;
 }
@@ -557,6 +603,9 @@ footer span {
   right: 50px;
   top: 50%;
   transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   padding-left: 10px;
   font-family: 'Open Sans';
   font-size: 0.8em;
@@ -646,6 +695,9 @@ footer span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
   }
   .menu ul {
     text-align: center;
@@ -713,7 +765,13 @@ footer span {
   .color-band .text p {
     max-height: 110px;
     overflow: hidden;
+    -webkit-overflow: hidden;
+    -moz-overflow: hidden;
+    -ms-overflow: hidden;
     text-overflow: ellipsis;
+    -webkit-text-overflow: ellipsis;
+    -moz-text-overflow: ellipsis;
+    -ms-text-overflow: ellipsis;
   }
   .color-band .text .ellipsis {
     display: block;
@@ -737,6 +795,9 @@ footer span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
   }
   .menu ul {
     text-align: center
